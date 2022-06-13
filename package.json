@@ -1,0 +1,30 @@
+{
+  "name": "designbyneesha",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "prestart": "parcel build ./public/index.html",
+    "dev": "parcel serve ./public/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/C-Ham/designbyneesha.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/C-Ham/designbyneesha/issues"
+  },
+  "homepage": "https://github.com/C-Ham/designbyneesha#readme",
+  "dependencies": {
+    "express": "^4.18.1",
+    "sass": "^1.52.3"
+  },
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.6.0",
+    "parcel": "^2.6.0"
+  }
+}
