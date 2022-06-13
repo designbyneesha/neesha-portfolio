@@ -1,0 +1,35 @@
+@use 'variables';
+
+body {
+    font-family: 'Poppins';
+    background-color: variables.$base;
+    font-size: 100%;
+    font-weight: 500;
+}
+
+h1 {
+    font-size: 6.3em;
+    color: variables.$titleText;
+}
+
+h2 {
+    font-size: 2.7em;
+    color: variables.$secondaryText;
+}
+
+h3 {
+    font-size: 1.6em;
+    color: variables.$secondaryText;
+}
+
+h4 {
+    font-size: 1em;
+    font-weight: 400;
+    color: variables.$secondaryText;
+}
+
+h5 {
+    font-size: 0.8em;
+    letter-spacing: 0.05em;
+    color: variables.$titleText;
+}
