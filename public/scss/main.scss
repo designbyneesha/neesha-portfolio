@@ -1,9 +1,12 @@
 @use 'variables';
+@import "title";
+@import "projects";
 
 body {
+    user-select: none;
     font-family: 'Poppins';
     background-color: variables.$base;
-    font-size: 100%;
+    font-size: 1.2vw;
     font-weight: 500;
 }
 
@@ -13,8 +16,9 @@ h1 {
 }
 
 h2 {
-    font-size: 2.7em;
+    font-size: 2.9em;
     color: variables.$secondaryText;
+    margin-bottom: 0.3em;
 }
 
 h3 {
@@ -23,13 +27,42 @@ h3 {
 }
 
 h4 {
-    font-size: 1em;
+    font-size: 1.2em;
     font-weight: 400;
+    line-height: 1.2em;
     color: variables.$secondaryText;
 }
 
+.h4--subtext {
+    color: variables.$subtextLight !important;
+}
+
 h5 {
-    font-size: 0.8em;
+    font-size: 0.9em;
     letter-spacing: 0.05em;
     color: variables.$titleText;
+}
+
+.h5--tag-yellow {
+    color: variables.$secondaryText;
+    padding: 0.4em 1em;
+    border: 2px solid variables.$tagYellow;
+    background-color: rgba(variables.$tagYellow, .075);
+    border-radius: 1.5em;
+}
+
+.h5--tag-orange {
+    color: variables.$secondaryText;
+    padding: 0.4em 1em;
+    border: 2px solid variables.$tagOrange;
+    background-color: rgba(variables.$tagOrange, .075);
+    border-radius: 1.5em;
+}
+
+.h5--tag-blue {
+    color: variables.$secondaryText;
+    padding: 0.4em 1em;
+    border: 2px solid variables.$tagBlue;
+    background-color: rgba(variables.$tagBlue, .075);
+    border-radius: 1.5em;
 }

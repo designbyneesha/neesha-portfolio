@@ -44,3 +44,16 @@ q:before, q:after {
 blockquote, q {
 	quotes: "" "";
 }
+
+/* Custom scrollbar */
+body::-webkit-scrollbar {
+	width: 0.25rem;
+}
+
+body::-webkit-scrollbar-track {
+	background: #1F1B24;
+}
+
+body::-webkit-scrollbar-thumb {
+	background: #4200CE;
+}
