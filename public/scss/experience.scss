@@ -1,0 +1,55 @@
+@use 'variables';
+
+.experience-section {
+    background-color: variables.$base;
+    height: 100%;
+    padding: 6em 8em;
+}
+
+.timeline-content {
+    position: relative;
+}
+
+/* Timeline vertical striped bar */
+.timeline-content::after {
+    content: '';
+    position: absolute;
+    border-left: 0.2em dashed variables.$subtextLight;
+    top: 8em;
+    bottom: 8em;
+    left: calc(35% - 0.9em);
+}
+
+.experience-tile {
+    left: 35%;
+    width: 50%;
+    position: relative;
+}
+
+/* Timeline circular progress indicator */
+.experience-tile::after {
+    left: -1.5em;
+    content: '';
+    position: absolute;
+    width: 1em;
+    height: 1em;
+    top: calc(50% - 8px);
+    background: variables.$base;
+    border: 0.2em solid variables.$subtextLight;
+    border-radius: 1em;
+    z-index: 3;
+}
+
+.experience-tile--date {
+    left: -9em;
+
+    position: absolute;
+    display: inline-block;
+    top: calc(50% - 8px);
+    text-align: right;
+    text-transform: uppercase;
+}
+
+.experience-tile--content {
+    padding: 4em 2em;
+}

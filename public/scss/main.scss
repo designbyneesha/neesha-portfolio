@@ -1,6 +1,7 @@
 @use 'variables';
 @import "title";
 @import "projects";
+@import "experience";
 
 body {
     user-select: none;
@@ -27,20 +28,28 @@ h3 {
 }
 
 h4 {
-    font-size: 1.2em;
+    font-size: 1.1em;
     font-weight: 400;
     line-height: 1.2em;
     color: variables.$secondaryText;
 }
 
 .h4--subtext {
-    color: variables.$subtextLight !important;
+    color: variables.$subtextLight;
 }
 
 h5 {
     font-size: 0.9em;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.06em;
     color: variables.$titleText;
+}
+
+/* Timeline tile metadata (COMPANY - LOCATION) */
+.h5--subtext {
+    color: variables.$subtextDark;
+    letter-spacing: 0.03em;
+    margin-top: 0.2em;
+    margin-bottom: 0.7em;
 }
 
 .h5--tag-yellow {
