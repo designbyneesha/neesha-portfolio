@@ -2,6 +2,7 @@
 @import "title";
 @import "projects";
 @import "experience";
+@import "footer";
 
 body {
     user-select: none;
@@ -22,6 +23,10 @@ h2 {
     margin-bottom: 0.3em;
 }
 
+.h2--section-heading {
+    color: variables.$titleText;
+}
+
 h3 {
     font-size: 1.6em;
     color: variables.$secondaryText;
@@ -34,8 +39,15 @@ h4 {
     color: variables.$secondaryText;
 }
 
+/* Project tile description */
 .h4--subtext {
     color: variables.$subtextLight;
+}
+
+.h4--hyperlink {
+    cursor: pointer;
+    color: variables.$titleText;
+    text-decoration: underline;
 }
 
 h5 {
