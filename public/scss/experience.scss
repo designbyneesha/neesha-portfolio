@@ -20,6 +20,16 @@
     left: calc(35% - 0.9em);
 }
 
+.timeline-content__scrollbar {
+    content: '';
+    position: absolute;
+    border-left: 0.2em solid variables.$titleText;
+    top: 8em;
+    bottom: 50%;
+    left: calc(35% - 0.9em);
+    z-index: 100;
+}
+
 .experience-tile {
     left: 35%;
     width: 50%;
@@ -27,7 +37,7 @@
 }
 
 /* Timeline circular progress indicator */
-.experience-tile::after {
+.experience-tile--bullet {
     left: -1.5em;
     content: '';
     position: absolute;
@@ -38,6 +48,11 @@
     border: 0.2em solid variables.$subtextLight;
     border-radius: 1em;
     z-index: 3;
+}
+
+.bullet--active {
+    border-color: variables.$titleText;
+    background-color: variables.$titleText;
 }
 
 .experience-tile--date {
