@@ -37,7 +37,7 @@
 }
 
 /* Timeline circular progress indicator */
-.experience-tile--bullet {
+.experience-tile__bullet {
     left: -1.5em;
     content: '';
     position: absolute;
@@ -55,7 +55,7 @@
     background-color: variables.$tagYellow;
 }
 
-.experience-tile--date {
+.experience-tile__date {
     left: -9em;
 
     position: absolute;
@@ -65,6 +65,6 @@
     text-transform: uppercase;
 }
 
-.experience-tile--content {
+.experience-tile__content {
     padding: 4em 2em;
 }

@@ -42,12 +42,26 @@
     font-weight: 500;
     display: flex;
     gap: 0.3em;
+    transition: all 0.3s; 
+}
+
+.btn--active {
+    background-color: #319949;
+}
+
+.copy-email__btn:hover {
+    filter:brightness(1.1);
+}
+
+.copy-email__btn:active {
+    filter:brightness(0.9);
 }
 
 .copy-email__icon {
     height: 1.5em;
     width: 1.5em;
     display: inline-block;
+    pointer-events: none;
 }
 
 .footer-content__img {

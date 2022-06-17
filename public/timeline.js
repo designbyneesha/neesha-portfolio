@@ -9,7 +9,7 @@ document.addEventListener('scroll', function(e) {
     var documentFocusHeight = window.innerHeight / 2;
 
     //Calculate padding to offset the scrollbar overflow
-    var offsetHeight = document.querySelector('.experience-tile--content').clientHeight / 2;
+    var offsetHeight = document.querySelector('.experience-tile__content').clientHeight / 2;
     var timelineHeight = document.querySelector('.timeline-content').getBoundingClientRect().height;
     var timelineBottom = document.querySelector('.timeline-content').getBoundingClientRect().bottom;
     var percentScroll = (timelineBottom / timelineHeight * 100) + "%";
@@ -28,7 +28,7 @@ document.addEventListener('scroll', function(e) {
     }
 
     //Highlight bullet points when they pass through the screen focus boundary
-    document.querySelectorAll('.experience-tile--bullet').forEach(bullet => {
+    document.querySelectorAll('.experience-tile__bullet').forEach(bullet => {
        if ((bullet.getBoundingClientRect().top / window.innerHeight) < 0.5) {
         bullet.classList.add("bullet--active");
        }
