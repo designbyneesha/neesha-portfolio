@@ -14,7 +14,7 @@
 .timeline-content::after {
     content: '';
     position: absolute;
-    border-left: 0.2em dashed variables.$subtextLight;
+    border-left: 0.2em dashed rgb(88, 88, 88);
     top: 8em;
     bottom: 8em;
     left: calc(35% - 0.9em);
@@ -23,7 +23,7 @@
 .timeline-content__scrollbar {
     content: '';
     position: absolute;
-    border-left: 0.2em solid variables.$titleText;
+    border-left: 0.2em solid variables.$tagYellow;
     top: 8em;
     bottom: 50%;
     left: calc(35% - 0.9em);
@@ -45,14 +45,14 @@
     height: 1em;
     top: calc(50% - 8px);
     background: variables.$base;
-    border: 0.2em solid variables.$subtextLight;
+    border: 0.2em solid rgb(88, 88, 88);
     border-radius: 1em;
     z-index: 3;
 }
 
 .bullet--active {
-    border-color: variables.$titleText;
-    background-color: variables.$titleText;
+    border-color: variables.$tagYellow;
+    background-color: variables.$tagYellow;
 }
 
 .experience-tile--date {

@@ -1,10 +1,12 @@
 var timelineHeight = document.querySelector('.timeline-content').clientHeight;
 var timelineScrollBar = document.querySelector('.timeline-content__scrollbar');
-//Specify the screen position the scrollbar should "stick" to 
-//when scrolling through timeline (vertical center of page)
-var documentFocusHeight = window.innerHeight / 2;
+
 
 document.addEventListener('scroll', function(e) {
+
+    //Specify the screen position the scrollbar should "stick" to 
+    //when scrolling through timeline (vertical center of page)
+    var documentFocusHeight = window.innerHeight / 2;
 
     //Calculate padding to offset the scrollbar overflow
     var offsetHeight = document.querySelector('.experience-tile--content').clientHeight / 2;
