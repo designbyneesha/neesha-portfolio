@@ -26,6 +26,12 @@
         background-color: #513886;
         width: 80px;
         height: 80px;
+
+        .navbar-icon__img {
+          max-height: 100%;
+          max-width: 100%;
+          transform: rotate(-90deg);
+        }
     }
 
     .aboutme-text {
@@ -34,16 +40,30 @@
         font-weight: 400;
         font-size: 20px;
         color: variables.$titleText;
+        text-decoration: none;
+    }
+
+    .aboutme-text:hover {
+      color: #ff934c;
+      transition: all 0.2s;
     }
 
     .linkedin-icon {
         grid-area: linkedin-icon;
+        cursor: pointer;
         bottom: 0;
         box-sizing: border-box;
-        background-color: #513886;
         width: 80px;
         height: 80px;
+        padding: 0.9em;
+        transform: rotate(-90deg);
     }
+}
+
+.sidenav--fixed {
+  background-color: rgba(31, 27, 36, 0.3); 
+  border-top: 1px solid #3d3044; 
+  position: fixed;
 }
 
 .title-section {

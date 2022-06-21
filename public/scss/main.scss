@@ -3,6 +3,7 @@
 @import "projects";
 @import "experience";
 @import "footer";
+@import "projectsection";
 
 body {
     user-select: none;
@@ -44,6 +45,11 @@ h4 {
     color: variables.$subtextLight;
 }
 
+/* Project page body text */
+.h4--description {
+    line-height: 1.4em;
+}
+
 .h4--hyperlink {
     cursor: pointer;
     color: variables.$titleText;
@@ -61,6 +67,12 @@ h5 {
     color: variables.$subtextDark;
     letter-spacing: 0.03em;
     margin-top: 0.2em;
+    margin-bottom: 0.7em;
+}
+
+.h5--description {
+    color: #5d5d5d;
+    letter-spacing: 0;
     margin-bottom: 0.7em;
 }
 
@@ -86,4 +98,8 @@ h5 {
     border: 2px solid variables.$tagBlue;
     background-color: rgba(variables.$tagBlue, .075);
     border-radius: 1.5em;
+}
+
+object {
+    pointer-events: none;
 }
