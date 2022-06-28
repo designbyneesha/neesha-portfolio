@@ -68,3 +68,8 @@
 .experience-tile__content {
     padding: 4em 2em;
 }
+
+.experience-hyperlink:hover h3 {
+    color: variables.$titleText;
+    transition: all 0.2s;
+}

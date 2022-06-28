@@ -22,6 +22,12 @@
         object-fit: cover;
     }
 
+    .img-banner.img-inline {
+        height: 90vh;
+        border-radius: 1em;
+        margin: 2.5em 0;
+    }
+
     .content-body {
         padding: 5em 8em;
     }
@@ -45,6 +51,7 @@
 }
 
 .header__title { 
+    margin-top: 2.5em;
     margin-bottom: 0.7em;
     grid-area: 2 / 1 / 3 / 6;
     
@@ -64,4 +71,43 @@
     padding: 2em;
     border-radius: 2em;
     justify-content: space-between;
+}
+
+.cta-button {
+    cursor: pointer;
+    padding: 1.2em;
+    background-color: variables.$tagYellow;
+    border-radius: 2em;
+    font-family: Poppins;
+    font-size: 0.7em;
+    transition: all 0.2s;
+}
+
+.cta-button h4 {
+    color: variables.$titleBase;
+    font-weight: 500;
+}
+
+.cta-button:hover {
+    background-color: variables.$titleText;
+}
+
+.flex-categories {
+    display: flex;
+    gap: 3em;
+    margin: 1em 0;
+}
+
+.flex-categories div {
+    flex: 1;
+}
+
+.flex-categories > div > h3 {
+    color: variables.$tagYellow;
+    margin-bottom: 0.5em;
+}
+
+.flex-categories > div > h4 {
+    font-size: 1em;
+    line-height: 1.5em;
 }
