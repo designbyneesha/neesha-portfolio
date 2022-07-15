@@ -23,9 +23,13 @@
     }
 
     .img-banner.img-inline {
-        height: 90vh;
+        height: auto;
         border-radius: 1em;
         margin: 2.5em 0;
+    }
+
+    .img-banner.img-inline > img {
+        object-fit: scale-down;
     }
 
     .content-body {
@@ -94,8 +98,15 @@
 
 .flex-categories {
     display: flex;
-    gap: 3em;
-    margin: 1em 0;
+    gap: 2em;
+    margin: 3em 0 0 0;
+}
+
+.flex-categories > img {
+    /*why does this work */
+    width: 10%;
+    border-radius: 1em;
+    flex: 1;
 }
 
 .flex-categories div {
@@ -110,4 +121,51 @@
 .flex-categories > div > h4 {
     font-size: 1em;
     line-height: 1.5em;
+}
+
+.flex-numbered-list {
+    background-color: #1f1b2480;
+    border-radius: 1em;
+    display: flex;
+    align-items: center;
+    padding: 1em 2em 1em 0;
+    margin: 0.5em 5em;
+}
+
+.numbered-list--num {
+    margin: 0;
+    font-size: 2.5em;
+    flex-basis: 10%;
+    text-align: center;
+}
+
+.numbered-list--txt {
+    flex-basis: 90%;
+}
+
+.problem-statement {
+    margin-top: 1em;
+    background-color: #3e2e5280;
+    margin: 1em 0;
+}
+
+.vision-statement {
+    background: #4e3fa2;
+    margin: 0 0 3em 0;
+}
+
+.text--yellow {
+    color: variables.$tagYellow;
+}
+
+.text--orange {
+    color: variables.$tagOrange;
+}
+
+.text--green {
+    color: variables.$tagGreen;
+}
+
+.text--cyan {
+    color: variables.$tagCyan;
 }
