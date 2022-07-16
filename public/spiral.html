@@ -42,7 +42,7 @@
                     </div>
                     <div>
                         <h5 class="h5--description">TOOLKIT</h5>
-                        <div class="project-tile__tags"><h5 class="h5--tag-blue">ADOBE XD</h5><h5 class="h5--tag-orange">ILLUSTRATOR</h5><h5 class="h5--tag-blue">SASS</h5><h5 class="h5--tag-yellow">NODE.JS</h5></div>
+                        <div class="project-tile__tags"><h5 class="h5--tag-green">ADOBE XD</h5><h5 class="h5--tag-orange">ILLUSTRATOR</h5><h5 class="h5--tag-blue">SASS</h5><h5 class="h5--tag-yellow">NODE.JS</h5></div>
                     </div>
                 </div>
             </div>
@@ -158,31 +158,94 @@
             <div class="img-banner img-inline">
                 <img src="images/spiral/mockups-01.jpg">
             </div>
+            <h5 class="h5--description caption">The "Plan" homepage for the website, with a Kanban Board. Any tasks dragged into the "Today's Focus" board will be added
+                to the "Focus" section to keep the user focused on a small number of scheduled tasks.
+            </h5>
 
             <div class="img-banner img-inline">
                 <img src="images/spiral/mockups.jpg">
             </div>
+            <h5 class="h5--description caption">The popup modal interface for adding tasks to the Kanban Board. Users can add task categories, priorities, time commitment expectations, and due dates.</h5>
 
             <div class="img-banner img-inline">
                 <img src="images/spiral/mockups-02.jpg">
             </div>
+            <h5 class="h5--description caption">The "Focus" section, with a Pomodoro Timer. There is an embedded keyword dictionary to lookup coding methods, to minimise time spent browsing the web. 
+                Users can set and change session times, as well as see tasks from "Today's Focus".</h5>
 
             <div class="img-banner img-inline">
                 <img src="images/spiral/mockups-03.jpg">
             </div>
+            <h5 class="h5--description caption">The "Learn" section, with daily programming challenges that are sourced from Leetcode. There is also an embedded search tool to find YouTube tutorials for coding concepts.</h5>
 
             <div class="flex-categories">
                 <img src="images/spiral/mockups-04.jpg" alt="">
                 <img src="images/spiral/mockups-05.jpg" alt="">
                 <img src="images/spiral/mockups-06.jpg" alt="">
             </div>
+            <h5 style="margin-top:1em;" class="h5--description">Mobile screen mockups for the "Plan", "Focus", and "Learn" sections.</h5>
 
             <h2 class="header__title">Website Development</h2>
+
+            <h5 style="margin-top:3em;" class="h5--description">DEVELOPMENT ROADMAP</h5>
+            <h4 class="h4--description">After submitting my pitch and receiving a High Distinction (A+ American equivalent) mark from the teaching team,
+                I was able to move to the development phase of the website.
+                <br><br> I created a development roadmap for myself to allocate time blocks for high-priority items, and push less relevant site features to
+                the end of the timeline.
+                <br><br> I chose not to utilise any third-party libraries for the project, as a personal learning challenge for myself, so I prioritised the development
+                of a vanilla Kanban Board and Pomodoro Timer.
+            </h4>
+
             <div class="img-banner img-inline">
                 <img src="images/spiral/dev-roadmap.jpg">
             </div>
-            
 
+            <h5 style="margin-top:3em;" class="h5--description">KANBAN BOARD IMPLEMENTATION</h5>
+            <h4 class="h4--description">
+                Implementing the drag-and-drop functionality for the board was done by creating a task object and appending each one to its respective parent board. Defining a valid drop-zone as a parent with "kanban-board" class
+                ensured that no illegal drops were accepted, and also allowed for hover state interactivity.
+                <br><br>A big challenge I had was color-coding category labels, as I wanted categories with the same name to be the same color. To implement this, I had to create a new category object and validate each name during my addTask() function.
+                For each unique label, I appended a programmatically-calculated label color to the category object, so any future category with the same name would reference that same color label.
+            </h4>
+
+            <div class="img-banner img-inline">
+                <img src="images/spiral/kanban-drag.gif">
+            </div>
+            <h5 class="h5--description caption">Interaction patterns for dragging between columns, deleting tasks, and adding/removing boards. Note that the "Delete" button functions as a 
+                multi-purpose node for deleting boards and tasks.
+            </h5>
+
+            <h5 style="margin-top:3em;" class="h5--description">POMODORO TIMER IMPLEMENTATION</h5>
+            <h4 class="h4--description">
+                The timer was also tough to make responsive, as changing the element size itself broke the precise padding for the stroke-dasharray calculations I had made.
+                <br><br>After much tinkering, I decided the best way to ensure nothing broke was to dynamically calculate the timer padding proportionally to the screen width, and retain the actual size of the timer itself.
+                <br><br>As for the dictionary, I implemented it stylistically the way I had intended, however after much online research I failed to find an API for coding keywords that was free and worked the way I intended. 
+                Ideally, I would have liked an API that had definitions for popular methods and functions for frontend languages, but this didn't seem to exist yet. So instead, I opted for a normal dictionary API.
+            </h4>
+
+            <div class="img-banner img-inline">
+                <img src="images/spiral/timer-set.gif">
+            </div>
+            <h5 class="h5--description caption">Setting custom session times for the Pomodoro Timer, and demonstrating a play state. When the session is complete, the Pomodoro Timer cycles to the next study/break/rest, and increments the count. Note the "next times" on the headings are not fully implemented.
+            </h5>
+            
+            <h2 class="header__title">Modifications & Final Thoughts</h2>
+            <h4 class="h4--description">Some site components underwent several minor changes between the mockup and final design process, some of which included:
+                <div class="bullet-list">
+                    <b><span class="text--yellow">Embedding a Spotify music player</span></b> ensured fast site load times as opposed to a vanilla music player. I originally had implemented a simple music player without the use of an external iframe, but wanted to include a variety of tracks so users wouldn't get annoyed by the repetition. This would have been problematic to implement without Spotify, as the repository wouldn't have been as lightweight.
+                    <br><br><b><span class="text--yellow">Cross-page support for the "Today's Focus" items</span></b> wasn't implemented as I ran out of time and wanted to focus on more essential aspects of the site instead. In the future, I think this would be a valuable feature to implement, as it helps with focus during longer study sessions.
+                    <br><br><b><span class="text--yellow">Excluding the "Learn" section</span></b> was the biggest decision I made for my site. The actual functionality of the section simply linked to external resources, and if users wanted to use those websites, they would likely just navigate to the page on the internet themselves
+                    The features weren't an integral part of the design brief, and I wanted to focus on polishing more important parts of the website first.
+                </div>
+            </h4>
+
+            <h5 style="margin-top:3em;" class="h5--description">PROJECT OUTCOME</h5>
+            <h4 class="h4--description">Spiral.io is now a polished study resource that is carefully designed in alignment with modern development tools such as GitHub and Jira, with design practices that allow computer science students to mentally compartmentalise their work separate from other facets of their life.<br><br>
+            </h4>
+            <div class="flex-numbered-list vision-statement">
+                <h2 class="numbered-list--num">🥇</h2>
+                <h4 class="numbered-list--txt"><span style="font-size: 0.9em;" class="text--yellow">ASSESSMENT MARK</span><br>I received a High Distinction mark, which is the highest grade possible to receive, for this assessment as well as the overall course.</h4>
+            </div>
         </div>
     </div>
 </body>

@@ -37,6 +37,11 @@
     }
 }
 
+.h5--description.caption {
+    line-height: 1.2em;
+    margin: -2em 0 0 0;
+}
+
 .content-header {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -152,6 +157,10 @@
 .vision-statement {
     background: #4e3fa2;
     margin: 0 0 3em 0;
+}
+
+.bullet-list {
+    margin: 2em 4em;
 }
 
 .text--yellow {

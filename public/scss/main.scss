@@ -100,6 +100,14 @@ h5 {
     border-radius: 1.5em;
 }
 
+.h5--tag-green {
+    color: variables.$secondaryText;
+    padding: 0.4em 1em;
+    border: 2px solid variables.$tagGreen;
+    background-color: rgba(variables.$tagBlue, .075);
+    border-radius: 1.5em;
+}
+
 object {
     pointer-events: none;
 }
