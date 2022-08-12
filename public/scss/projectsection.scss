@@ -186,3 +186,31 @@
 .text--cyan {
     color: variables.$tagCyan;
 }
+
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 4em 4em 4em calc(4em + 80px) ;
+  }
+  
+  /* Create three equal columns that sits next to each other */
+  .column {
+    flex: 40%;
+    max-width: 41%;
+    padding: 0 2em;
+  }
+  
+  .column img {
+    margin-top: 3em;
+    vertical-align: middle;
+    width: 100%;
+  }
+  
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .column {
+      flex: 100%;
+      max-width: 100%;
+    }
+  }
