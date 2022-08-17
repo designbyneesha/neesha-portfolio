@@ -65,6 +65,17 @@
     text-transform: uppercase;
 }
 
+.experience-tile__date.mobile {
+    position: inherit;
+    padding-bottom: 1em;
+    text-align: left;
+    display: none;
+}
+
+.experience-tile__date.desktop {
+    display: block;
+}
+
 .experience-tile__content {
     padding: 4em 2em;
 }
@@ -72,4 +83,41 @@
 .experience-hyperlink:hover h3 {
     color: variables.$titleText;
     transition: all 0.2s;
+}
+
+@media only screen and (max-width: 480px) {
+
+    .experience-section {
+        padding: 8em 2em 0;
+    }
+
+    .section-description {
+        width: auto;
+    }
+
+    .experience-tile {
+        left: 2em;
+        width: 100%;
+    }
+
+    .timeline-content__scrollbar {
+        left: 1.15em;
+    }
+
+    .timeline-content:after {
+        left: 1.15em;
+        bottom: 9em;
+    }
+
+    .experience-tile__content > h4 {
+        font-size: 1.2em !important;
+    }
+
+    .experience-tile__date.mobile {
+        display: block;
+    }
+
+    .experience-tile__date.desktop {
+        display: none;
+    }
 }

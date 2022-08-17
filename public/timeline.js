@@ -25,6 +25,9 @@ document.addEventListener('scroll', function(e) {
     //Bounds checking for scrollbar underflow
     else if (parseInt(getComputedStyle(timelineScrollBar).bottom, 10) < offsetHeight) {
         timelineScrollBar.style.bottom = "8em";
+        if (screen.width < 480) {
+            timelineScrollBar.style.bottom = "9em";
+        }
     }
 
     //Highlight bullet points when they pass through the screen focus boundary

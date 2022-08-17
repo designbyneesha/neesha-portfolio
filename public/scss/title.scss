@@ -11,7 +11,7 @@
     grid-auto-flow: column;
     grid-template-areas: 
       "nav-icon about-me . linkedin-icon";
-    grid-template-columns: 80px 1fr 3fr;
+    grid-template-columns: 80px 2fr 3fr;
     gap: 40px;
     align-items: center;
 
@@ -96,6 +96,15 @@
   width: 100%;
   background-color: #513886;
   border-radius: 40px 0px 0px 40px;
+}
+
+.img-container.hidden {
+  display: none;
+}
+
+.img-container.mobile {
+  display: none;
+  border-radius: 0px 0px 40px 40px; 
 }
 
 .img-container.left {
@@ -184,4 +193,60 @@
   
   .slider.round:before {
     border-radius: 50%;
+  }
+
+  @media only screen and (max-width: 480px) {
+
+    html, body {
+      font-size: 2.5vw !important;
+    }
+
+    h4 {
+      font-size: 1.4em !important;
+    }
+
+    .sidenav {
+      transform: none;
+      width: 100vw;
+      grid-template-columns: 80px 2fr 1fr;
+      grid-template-areas: "nav-icon about-me linkedin-icon";
+
+      .aboutme-text {
+        font-size: 17px;
+      }
+    }
+
+    .title-section {
+      margin-left: 0;
+      flex-direction: column;
+      padding-top: 80px;
+
+      .img-container.mobile {
+        margin: 0 2em;
+        width: 90vw;
+        flex: 4;
+        display: flex;
+      }
+
+      .img-container.desktop {
+        display: none;
+      }
+
+      .content-grid {
+        flex: 3;
+        width: 90vw;
+        margin: 0px 2em;
+        padding: 8em 0;
+      }
+    }
+
+    .sidenav .navbar-icon .navbar-icon__img {
+      transform: none;
+    }
+
+    .sidenav .linkedin-icon {
+      transform: none;
+      padding: 20px;
+      justify-self: end;
+    }
   }

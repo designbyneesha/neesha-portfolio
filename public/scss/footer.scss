@@ -80,3 +80,18 @@
     min-width: 100%; 
     object-fit: cover;
 }
+
+@media only screen and (max-width: 480px) {
+
+    .footer-section {
+        padding: 0 6em;
+    }
+
+    .footer-content {
+        padding: 0;
+    }
+
+    .footer-content__img {
+        width: 90vw;
+    }
+}
