@@ -214,3 +214,29 @@
       max-width: 100%;
     }
   }
+
+  @media only screen and (max-width: 480px) {
+    .page-content {
+        margin-left: 0px;
+        
+        .content-body {
+            padding: 5em 3em;
+        }
+
+        .img-banner {
+            margin-top: 80px;
+        } 
+    }
+
+    .sidenav--fixed {
+        position: absolute;
+    }
+
+    .flex-categories {
+        flex-direction: column;
+    }
+
+    .flex-categories > img {
+        width: auto;
+    }
+  }
